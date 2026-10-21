@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worldly Dictionary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="wordmark" href="index.html" aria-label="Worldly Dictionary home">Wordly<span>.</span></a>
+        <p class="header-note">A little more language, every day.</p>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false">Dark theme</button>
+    </header>
+    <main>
+        <section id="search-section" aria-labelledby="search-title">
+            <p class="eyebrow">Your word desk</p>
+            <h1 id="search-title">Find a word.</h1>
+            <p class="section-intro">Look up a meaning, hear how it sounds, and keep the words you love.</p>
+            <form id="search-form">
+                <label for="word-input">Word to look up</label>
+                <div class="search-control">
+                    <input type="search" id="word-input" name="word" placeholder="Try “serendipity”" autocomplete="off" required>
+                    <button id="search-button" type="submit">Search <span aria-hidden="true">↗</span></button>
+                </div>
+            </form>
+        </section>
+        <section id="results-section" aria-labelledby="results-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">The good stuff</p>
+                    <h2 id="results-title">Dictionary entry</h2>
+                </div>
+                <span class="entry-mark" aria-hidden="true">Aa</span>
+            </div>
+            <div id="result" aria-live="polite" aria-busy="false">
+                <p class="empty-state">Your next new word is just a search away.</p>
+            </div>
+        </section>
+        <section id="favorites-section" aria-labelledby="favorites-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Saved for later</p>
+                    <h2 id="favorites-title">Favorite words</h2>
+                </div>
+                <span class="favorite-count" id="favorite-count">0</span>
+            </div>
+            <p id="favorites-empty" class="empty-state">Words you save will live here.</p>
+            <ul id="favorites-list"></ul>
+        </section>
+    </main>
+    <footer>
+        <p>Wordly Dictionary <span aria-hidden="true">·</span> Keep exploring.</p>
+    </footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
